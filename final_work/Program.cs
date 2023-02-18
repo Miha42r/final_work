@@ -1,7 +1,7 @@
 ﻿
 
-string[] str = { "1234", "123", "12345", "12", "34" };
-//Console.WriteLine(str[0].Length);
+string[] str = { "1234", "123", "12345"};
+
 int j = 0;
 for (int i = 0; i < str.Length; i++)
 {
