@@ -46,10 +46,6 @@ int j = 0;
             mass[j] = str[i];
             j++;
         }
-        else
-        {
-                
-        }
     }
     PrintArray(mass);
 }
