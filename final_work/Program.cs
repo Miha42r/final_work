@@ -1,7 +1,6 @@
-﻿
-using System.Linq.Expressions;
+﻿using System.Linq.Expressions;
 
-string[] Input()
+string[] Input() //ввод значений в массив
 {
     Console.WriteLine("Введите количество элементов");
     int length = int.Parse(Console.ReadLine()!);
@@ -13,22 +12,20 @@ string[] Input()
     }
     return mass;
 }
-
-void PrintArray(string[] array)
+void PrintArray(string[] array)  //Метод вывода массива
 {
-    Console.WriteLine("New array data");
+    Console.WriteLine("\nNew array data");
+    Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write(array[i] + " ");
+        Console.Write($" [{array[i]}] ");
     }
-    Console.WriteLine();
+    Console.Write("]");
+Console.WriteLine();
 }
-
-string[] str = Input();
-FindElementsLessThree(str);
-void FindElementsLessThree(string[] str)
+void FindElementsLessThree(string[] str)  // Ищем элементы меньше трех и создаем из них новый массив
 {
-int count = 0;
+    int count = 0;
 
     for (int i = 0; i < str.Length; i++)
     {
@@ -36,11 +33,12 @@ int count = 0;
         {
             count++;
         }
-        //Console.WriteLine($"This is elements less three: {str2[j]}");
-     }
 
- string[] mass = new string[count];
-    int j = 0;
+    }
+
+string[] mass = new string[count];
+int j = 0;
+
     for (int i = 0; i < str.Length; i++)
     {
         if (str[i].Length <= 3)
@@ -48,6 +46,15 @@ int count = 0;
             mass[j] = str[i];
             j++;
         }
+        else
+        {
+                
+        }
     }
     PrintArray(mass);
 }
+
+// Начало программы
+
+string[] str = Input();
+FindElementsLessThree(str);
